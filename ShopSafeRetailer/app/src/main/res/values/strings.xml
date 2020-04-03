@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Shop Safe</string>
+    <string name="app_name">Shop Safe - Retailer</string>
     <string name="log_in">Login</string>
     <string name="sign_up">Sign up</string>
     <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
     <string name="confirm_password_hint">Confirm Password</string>
-    <string name="name_hint">Full Name</string>
-    <string name="address_hint">Your Residential Address</string>
+    <string name="name_hint">Store Name</string>
+    <string name="address_hint">Store\'s Address</string>
     <string name="age_hint">Your age</string>
     <string name="health_hint">Health Condition (If any)</string>
     <string name="reset_password">Forgot your password?</string>
@@ -22,4 +22,6 @@
     <string name="add_to_Cart">Add to cart</string>
     <string name="view_your_cart">Your Cart</string>
     <string name="confirm_order">Confirm Order</string>
+    <string name="inventory">Inventory</string>
+    <string name="add_product">Add New Product</string>
 </resources>

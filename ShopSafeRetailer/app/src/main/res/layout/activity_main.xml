@@ -22,29 +22,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="@string/app_name"
-            android:background="@drawable/round_corners" />
+            android:background="@drawable/round_corners"
+            app:titleTextColor="@android:color/white"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/feed_recycler_view"
             android:nestedScrollingEnabled="false"
-            tools:listitem="@layout/feed_row"
             android:layout_marginBottom="65dp"/>
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/cart_btn"
+        android:id="@+id/inventory_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingEnd="50dp"
         android:paddingStart="50dp"
-        android:text="@string/view_your_cart"
+        android:text="@string/inventory"
         android:background="@drawable/white_button_layout"
         android:backgroundTint="@color/colorAccent"
         android:textColor="@android:color/white"
-        android:drawableEnd="@drawable/ic_my_cart"
+        android:drawableEnd="@drawable/ic_shelf"
         android:drawablePadding="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
