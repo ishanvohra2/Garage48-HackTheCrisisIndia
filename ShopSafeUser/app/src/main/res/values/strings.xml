@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Shop Safe</string>
+    <string name="log_in">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="name_hint">Full Name</string>
+    <string name="address_hint">Your Residential Address</string>
+    <string name="age_hint">Your age</string>
+    <string name="health_hint">Health Condition (If any)</string>
+    <string name="reset_password">Forgot your password?</string>
+    <string name="minimum_password">Password must have atleast 6 characters</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="pin_hint">PIN Code</string>
+    <string name="phone_et">Enter phone number</string>
+    <string name="already_have_acc">Already have an account?</string>
+    <string name="enter_family_info">Enter Family Info</string>
+    <string name="adults_hint">Number of adults</string>
+    <string name="children_hint">Number of Children</string>
+    <string name="submit">Submit</string>
+    <string name="add_to_Cart">Add to cart</string>
+    <string name="view_your_cart">Your Cart</string>
+</resources>

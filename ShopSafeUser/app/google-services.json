@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "933924220473",
+    "firebase_url": "https://date-1e8d4.firebaseio.com",
+    "project_id": "date-1e8d4",
+    "storage_bucket": "date-1e8d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933924220473:android:b0feadddc30688acc0e7e8",
+        "android_client_info": {
+          "package_name": "com.hackcrisis.shopsafeuser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "933924220473-p62b13262rbe9too9pdt2f5qfaa02erl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hackcrisis.shopsafeuser",
+            "certificate_hash": "3025cb66a45b50407315dc43fd5c31f23408b6ad"
+          }
+        },
+        {
+          "client_id": "933924220473-qdp015b2v1191clt4qlaaddc05optqdl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBn8Gw_jesQLcpJGwpCvbutpGV3qMV4TwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "933924220473-sl463l674g3ejjif7jkth0mfncqgf1dl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
