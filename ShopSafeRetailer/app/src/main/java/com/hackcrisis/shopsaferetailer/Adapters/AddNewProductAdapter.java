@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -69,6 +70,8 @@ public class AddNewProductAdapter extends RecyclerView.Adapter<AddNewProductAdap
 
         holder.addedBox.setVisibility(View.GONE);
         holder.addBtn.setVisibility(View.VISIBLE);
+
+        Glide.with(context.getApplicationContext()).load(productDetails.getImgUrl()).into(holder.imageView);
 
         holder.productNameTv.setText(productDetails.getProductName());
         holder.priceTv.setText("INR. " + productDetails.getPrice());

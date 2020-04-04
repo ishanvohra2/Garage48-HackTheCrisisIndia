@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_layout"
+    android:padding="8dp"
+    android:layout_margin="6dp">
+
+    <TextView
+        android:id="@+id/timeTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="8:00 am"
+        android:textColor="@color/colorAccent"
+        android:textSize="17sp"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/spots_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4 spots left"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="15sp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

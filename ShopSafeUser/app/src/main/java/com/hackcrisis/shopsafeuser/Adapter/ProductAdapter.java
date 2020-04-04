@@ -1,6 +1,7 @@
 package com.hackcrisis.shopsafeuser.Adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,12 +12,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
 import com.hackcrisis.shopsafeuser.Data.ProductDetails;
 import com.hackcrisis.shopsafeuser.R;
 
@@ -68,6 +72,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
         holder.productNameTv.setText(product.getProductName());
         holder.priceTv.setText("INR "+product.getPrice());
+
+        Glide.with(context.getApplicationContext()).load(product.getImgUrl()).into(holder.productImage);
 
         databaseReference.child("cartDetails").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child(product.getProductId()).addValueEventListener(new ValueEventListener() {
             @Override

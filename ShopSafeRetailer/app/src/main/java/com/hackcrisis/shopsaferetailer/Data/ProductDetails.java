@@ -2,8 +2,16 @@ package com.hackcrisis.shopsaferetailer.Data;
 
 public class ProductDetails {
 
-    private String productId, productName, productCategory, productSubCategory;
+    private String productId, productName, productCategory, productSubCategory, imgUrl;
     private float weightPerPkt, price;
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
 
     public String getProductId() {
         return productId;

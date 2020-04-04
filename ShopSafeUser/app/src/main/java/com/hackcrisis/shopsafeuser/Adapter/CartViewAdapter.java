@@ -5,11 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -33,6 +35,7 @@ public class CartViewAdapter extends RecyclerView.Adapter<CartViewAdapter.MyView
 
         private TextView productNameTv, priceTv, qtyTv;
         private Button plusBtn, minusBtn;
+        private ImageView productImage;
 
         public MyViewHolder(View itemView){
             super(itemView);
@@ -41,6 +44,7 @@ public class CartViewAdapter extends RecyclerView.Adapter<CartViewAdapter.MyView
             qtyTv = itemView.findViewById(R.id.cart_view_quantity);
             plusBtn = itemView.findViewById(R.id.cart_view_item_add);
             minusBtn = itemView.findViewById(R.id.cart_view_item_subtract);
+            productImage = itemView.findViewById(R.id.product_image);
         }
     }
 
@@ -66,6 +70,8 @@ public class CartViewAdapter extends RecyclerView.Adapter<CartViewAdapter.MyView
         holder.priceTv.setText("INR" + item.getPrice());
         holder.productNameTv.setText(item.getProductName());
         holder.qtyTv.setText(item.getQty() + "");
+
+        Glide.with(context.getApplicationContext()).load(item.getImgUrl()).into(holder.productImage);
 
         holder.plusBtn.setOnClickListener(new View.OnClickListener() {
             @Override

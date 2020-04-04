@@ -24,4 +24,7 @@
     <string name="confirm_order">Confirm Order</string>
     <string name="inventory">Inventory</string>
     <string name="add_product">Add New Product</string>
+    <string name="start_time">Select opening time</string>
+    <string name="close_time">Enter closing time</string>
+    <string name="status">Status</string>
 </resources>

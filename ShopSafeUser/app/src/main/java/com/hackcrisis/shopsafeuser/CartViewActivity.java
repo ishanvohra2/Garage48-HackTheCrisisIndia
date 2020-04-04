@@ -6,8 +6,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -24,6 +27,8 @@ public class CartViewActivity extends AppCompatActivity {
 
     private ArrayList<CartItem> cartItems = new ArrayList<>();
     private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+    private float cartColories = 0;
+    private float reqdCalories = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +44,19 @@ public class CartViewActivity extends AppCompatActivity {
             }
         });
 
+        databaseReference.child("familyDetails").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                reqdCalories = (dataSnapshot.child("adults").getValue(Integer.class)*2400)
+                        + (dataSnapshot.child("children").getValue(Integer.class)*1600);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -50,9 +68,11 @@ public class CartViewActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
                     cartItems = new ArrayList<>();
+                    cartColories = 0;
                     for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                         CartItem item = snapshot.getValue(CartItem.class);
                         cartItems.add(item);
+                        cartColories = cartColories + (item.getQty() * item.getCalories() + item.getWeightPerPkt());
                     }
                     adapter.setCartItems(cartItems);
                     adapter.notifyDataSetChanged();
@@ -62,6 +82,18 @@ public class CartViewActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        Button confirmBtn = findViewById(R.id.confirm_button);
+        confirmBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(cartColories>reqdCalories){
+                    Toast.makeText(CartViewActivity.this, "You have exceed the limit for items in your cart.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                startActivity(new Intent(CartViewActivity.this, ConfirmOrderActivity.class));
             }
         });
     }

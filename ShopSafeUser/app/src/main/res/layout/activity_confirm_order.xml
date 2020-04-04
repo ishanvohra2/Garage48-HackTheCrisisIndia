@@ -22,15 +22,26 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="@string/app_name"
-            android:background="@drawable/round_corners"/>
+            app:title="@string/confirm_order"
+            android:background="@drawable/round_corners" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/feed_recycler_view"
-            tools:listitem="@layout/feed_row"
-            android:layout_marginBottom="65dp"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/shop_recycler"
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/shop_display_item"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/recycler_view"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginBottom="65dp"
+            tools:listitem="@layout/slot_item"
+            android:layout_weight="1"/>
 
     </LinearLayout>
 
@@ -40,12 +51,10 @@
         android:layout_height="wrap_content"
         android:paddingEnd="50dp"
         android:paddingStart="50dp"
-        android:text="@string/view_your_cart"
+        android:text="@string/place_order"
         android:background="@drawable/white_button_layout"
         android:backgroundTint="@color/colorAccent"
         android:textColor="@android:color/white"
-        android:drawableEnd="@drawable/ic_my_cart"
-        android:drawablePadding="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

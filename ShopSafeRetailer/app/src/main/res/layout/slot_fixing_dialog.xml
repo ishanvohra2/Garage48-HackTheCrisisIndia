@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_layout">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Store Timings"
+        android:background="@drawable/round_corners"
+        app:titleTextColor="@android:color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_time"
+            android:textSize="17sp"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/select_start_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HH:MM"
+            android:textSize="17sp"
+            android:textColor="@color/colorAccent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/close_time"
+            android:textSize="17sp"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/select_close_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HH:MM"
+            android:textSize="17sp"
+            android:textColor="@color/colorAccent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="6dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_layout"
+        android:text="@string/submit"
+        android:textColor="@color/colorAccent"
+        android:layout_margin="12dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"/>
+
+</LinearLayout>

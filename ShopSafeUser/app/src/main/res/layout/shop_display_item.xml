@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="125dp"
+    android:layout_height="125dp"
+    android:background="@drawable/white_button_layout"
+    android:backgroundTint="@color/colorAccent"
+    android:layout_margin="6dp">
+
+    <TextView
+        android:id="@+id/shop_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Shop Name"
+        android:textSize="17sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+</LinearLayout>

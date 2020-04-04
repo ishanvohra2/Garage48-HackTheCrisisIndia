@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="@drawable/button_layout"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/order_placed_by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="@color/colorAccent"
+        android:textSize="17sp"
+        android:layout_margin="6dp"/>
+
+    <TextView
+        android:id="@+id/total_amount_paid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Amount Paid"
+        android:textColor="@color/colorAccent"
+        android:textSize="17sp"
+        android:layout_margin="6dp"/>
+
+    <TextView
+        android:id="@+id/address_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DD/MM/YY"
+        android:textColor="@color/colorAccent"
+        android:textSize="17sp"
+        android:layout_margin="6dp"/>
+
+</LinearLayout>

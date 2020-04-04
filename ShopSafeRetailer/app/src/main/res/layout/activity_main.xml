@@ -30,6 +30,7 @@
             android:layout_height="match_parent"
             android:id="@+id/feed_recycler_view"
             android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/recent_orders_item"
             android:layout_marginBottom="65dp"/>
 
     </LinearLayout>

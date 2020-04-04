@@ -22,4 +22,13 @@
     <string name="add_to_Cart">Add to cart</string>
     <string name="view_your_cart">Your Cart</string>
     <string name="confirm_order">Confirm Order</string>
+    <string name="adults_no">Number of Adults</string>
+    <string name="child_no">Number of Children</string>
+    <string name="place_order">Proceed To Pay</string>
+    <string name="home_delivery">Home Delivery</string>
+    <string name="take_away">Take Away</string>
+    <string name="mode_of_delivery">Select mode of delivery</string>
+    <string name="cancel">Cancel</string>
+    <string name="order_placed">Order Placed</string>
+    <string name="recent_order">Recent Orders</string>
 </resources>

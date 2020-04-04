@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -74,6 +75,7 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.MyVi
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 holder.nameTv.setText(dataSnapshot.child("productName").getValue(String.class));
                 holder.priceTv.setText("INR. " + dataSnapshot.child("price").getValue(Float.class));
+                Glide.with(context.getApplicationContext()).load(dataSnapshot.child("imgUrl").getValue(String.class)).into(holder.imageView);
             }
 
             @Override
